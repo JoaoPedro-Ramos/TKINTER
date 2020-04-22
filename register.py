@@ -1,5 +1,7 @@
 from tkinter import *
-import log_in
+import thanks
+from time import sleep
+
 
 class Inicial:
 
@@ -44,11 +46,10 @@ class Inicial:
         elif a == b:
             self.menssage ['text'] = 'AUTHORIZED ACCESS'
             self.menssage ['fg'] = 'green'
+            sleep(1)
             self.inicio.destroy()
-            log_in.init_login(True)
+            thanks.init_thanks(True)
 
         else:
             self.menssage ['text'] = 'ACCESS DENIED'
             self.menssage ['fg'] = 'red'
-
-
